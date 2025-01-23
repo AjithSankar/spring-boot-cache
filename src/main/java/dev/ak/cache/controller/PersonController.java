@@ -39,8 +39,7 @@ public class PersonController {
             @RequestParam(name = "page", defaultValue = "1") int page,
             @RequestParam(name = "size" , defaultValue = "10") int size) {
 
-        PageRequest pageRequest = PageRequest.of(page, size);
-        Page<Person> personPage = personService.getPagedPersons(pageRequest);
+        Page<Person> personPage = personService.getPagedPersons(page, size);
         return ResponseEntity.ok(personPage.getContent());
     }
 
@@ -104,11 +103,10 @@ public class PersonController {
             personRepository.save(person);
         }
         return person;
-    }
+    } */
 
     @DeleteMapping("/{id}")
-    public Integer delete(@PathVariable("id") int id) {
-        personRepository.deleteById(id);
-        return id;
-    }*/
+    public void delete(@PathVariable("id") Integer id) {
+        personService.deleteById(id);
+    }
 }
