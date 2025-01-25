@@ -3,7 +3,7 @@
 Caching is a mechanism to enhance the performance of a system. 
 It is a temporary memory that lies between the application and the persistent database. Cache memory stores recently used data items in order to reduce the number of database hits as much as possible
 
-# Spring starter dependency
+# Spring starter cache dependency
 Include the latest version of spring-boot-starter-cache dependency that transitively includes spring-context-support and spring-context modules. Both context modules provide the necessary classes and interfaces for handling the caching feature.
 
 ```
