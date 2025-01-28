@@ -14,5 +14,9 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: false
-#  cache:
-#    type: none  #If we want to disable caching in any environment then use spring.cache.type property.
+  cache:
+    type: redis  #If we want to disable caching in any environment then use spring.cache.type property.
+
+  redis:
+    host: localhost
+    port: 6379

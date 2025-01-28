@@ -34,13 +34,13 @@ public class PersonService {
         return personList;
     }
 
-    @Cacheable(key = "#id")
+    @Cacheable(value = "persons", key = "#id")
     public Person findById(Integer id) {
         return personRepository.findById(id).orElse(null);
     }
 
 
-    @Cacheable(key = "#page + '-' + #size")
+    @Cacheable(value = "pagedPersons", key = "#page + '-' + #size")
     public Page<Person> getPagedPersons(int page, int size) {
         PageRequest pageRequest = PageRequest.of(page, size);
         log.info("Getting persons for Page {} and size {} ", page, size);
@@ -49,17 +49,17 @@ public class PersonService {
         return personPage;
     }
 
-    @CachePut(key = "#person.id")
+    @CachePut(value = "persons", key = "#person.id")
     public Person save(Person person) {
         return personRepository.save(person);
     }
 
-    @CacheEvict(key = "#id")
+    @CacheEvict(value = "persons", key = "#id")
     public void deletePersonById(Integer id) {
         personRepository.deleteById(id);
     }
 
-    @CacheEvict(allEntries = true)  // The @CacheEvict annotation offers an extra parameter ‘allEntries’ for evicting the whole specified cache, rather than a key in the cache.
+    @CacheEvict(value = "persons", allEntries = true)  // The @CacheEvict annotation offers an extra parameter ‘allEntries’ for evicting the whole specified cache, rather than a key in the cache.
     public void deleteAllPersons() {
         personRepository.deleteAll();
     }

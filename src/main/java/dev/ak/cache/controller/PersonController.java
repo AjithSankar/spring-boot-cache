@@ -30,7 +30,7 @@ public class PersonController {
     }
 
     @GetMapping("/{id}")
-    public Person findAll(@PathVariable Integer id) {
+    public Person findById(@PathVariable Integer id) {
         return personService.findById(id);
     }
 
@@ -107,6 +107,6 @@ public class PersonController {
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable("id") Integer id) {
-        personService.deleteById(id);
+        personService.deletePersonById(id);
     }
 }
