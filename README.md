@@ -3,7 +3,7 @@
 Caching is a mechanism to enhance the performance of a system. 
 It is a temporary memory that lies between the application and the persistent database. Cache memory stores recently used data items in order to reduce the number of database hits as much as possible
 
-# Spring starter dependency
+# Spring starter cache dependency
 Include the latest version of spring-boot-starter-cache dependency that transitively includes spring-context-support and spring-context modules. Both context modules provide the necessary classes and interfaces for handling the caching feature.
 
 ```
@@ -18,12 +18,12 @@ Include the latest version of spring-boot-starter-cache dependency that transiti
 Spring boot needs an underlying cache provider that can store and manage the cached objects and support lookups. Spring boot autoconfigures one of these providers with default options if it is present in the classpath and we have enabled cache by @EnableCaching.
 
 - JCache (JSR-107) (EhCache 3, Hazelcast, Infinispan, and others)
-- EhCache (example)
+- EhCache
 - Hazelcast
 - Infinispan
 - Couchbase
 - Redis
-- Caffeine (example)
+- Caffeine
 - Simple cache
 
 To customize the configuration of any of the above providers, we can place the corresponding configuration file in the /resources folder and supply the config location to Spring boot.
