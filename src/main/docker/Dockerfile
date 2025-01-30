@@ -1,5 +1,5 @@
 
-FROM openjdk:21-slim
+FROM openjdk:17-jdk-slim
 
 WORKDIR /opt/remitra
 

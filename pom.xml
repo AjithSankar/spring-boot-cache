@@ -15,7 +15,7 @@
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
-		<java.version>21</java.version>
+		<java.version>17</java.version>
 		<start-class>dev.ak.cache.SpringBootCacheApplication</start-class>
 	</properties>
 	<dependencies>
