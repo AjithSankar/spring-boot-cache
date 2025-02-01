@@ -22,7 +22,7 @@ Spring boot needs an underlying cache provider that can store and manage the cac
 - Hazelcast
 - Infinispan
 - Couchbase
-- Redis
+- Redis (Remote Directory server)
 - Caffeine
 - Simple cache
 

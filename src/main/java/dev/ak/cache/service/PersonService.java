@@ -20,7 +20,6 @@ import java.util.List;
 @CacheConfig(cacheNames = "pagedPersons")  // This annotation allows us to specify some of the cache configurations at the class level, so we do not have to repeat them multiple times over each method.
 public class PersonService {
 
-    private static final Logger log = LoggerFactory.getLogger(PersonService.class);
     private final PersonRepository personRepository;
 
     public PersonService(PersonRepository personRepository) {

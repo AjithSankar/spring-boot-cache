@@ -90,20 +90,7 @@ public class PersonController {
         }
         return person;
     }
-
-    @PutMapping()
-    public Person update(int id, String phoneNumber) {
-        Person person = null;
-        Optional<Person> optionalPerson = personRepository.findById(id);
-        if (optionalPerson.isPresent()) {
-            person = optionalPerson.get();
-            person.setPhoneNumber(phoneNumber);
-        }
-        if (person != null) {
-            personRepository.save(person);
-        }
-        return person;
-    } */
+*/
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable("id") Integer id) {
