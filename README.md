@@ -17,7 +17,7 @@ Include the latest version of spring-boot-starter-cache dependency that transiti
 
 Spring boot needs an underlying cache provider that can store and manage the cached objects and support lookups. Spring boot autoconfigures one of these providers with default options if it is present in the classpath and we have enabled cache by @EnableCaching.
 
-- JCache (JSR-107) (EhCache 3, Hazelcast, Infinispan, and others)
+- JCache (JSR-107) (EhCache 3, Hazelcast, Infinispan)
 - EhCache
 - Hazelcast
 - Infinispan
